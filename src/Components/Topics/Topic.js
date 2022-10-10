@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Topic = () => {
+const Topics = () => {
     return (
         <div>
             <h4>This is topics</h4>
@@ -8,4 +8,4 @@ const Topic = () => {
     );
 };
 
-export default Topic;
+export default Topics;
