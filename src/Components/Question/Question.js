@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Question = (props) => {
     const { id, question, options } = props.question;
+    const [isChecked, setIsChecked] = useState(false);
+    const handleChange = () => {
+        setIsChecked(!isChecked);
+    }
     return (
         <div className='p-5'>
             <div className='bg-slate-200'>
@@ -11,7 +15,7 @@ const Question = (props) => {
                 <div className='grid grid-cols-2 gap-2'>
                     {
                         options.map(option => <div className='border border-indigo-300'>
-                            <li className='p-5'>{option}</li>
+                            <li onClick={handleChange} className='p-5 list-none'><input type='checkbox' checked={isChecked}></input>{option}</li>
                         </div>)
                     }
                 </div>
