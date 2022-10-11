@@ -1,8 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { useLoaderData } from 'react-router-dom';
+import Quiz from '../Quiz/Quiz';
 
 const Topics = () => {
+    const quizes = useLoaderData();
+    const { data } = quizes;
     return (
         <div className='w-full p-10 mt-0'>
             <header className="w-full bg-no-repeat h-96 bg-cover bg-center bg-[url('/public/images/web-quizz.png')]">
@@ -25,6 +29,18 @@ const Topics = () => {
 
 
             </header>
+            <div className='my-10'>
+                <h2 className='text-3xl font-semibold'>Popular Quizes</h2>
+                <p className='text-xl'>Click below for participating in the quiz context</p>
+            </div>
+            <div className='grid grid-cols-3 gap-4'>
+                {
+                    data.map(quiz => <Quiz
+                        key={quiz.id}
+                        quiz={quiz}
+                    ></Quiz>)
+                }
+            </div>
         </div>
 
 
