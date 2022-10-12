@@ -68,3 +68,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Name of Project
+web quizz (website on quizes related to web developement)
+
+### Live website Link
+https://scintillating-lollipop-0e1359.netlify.app/
+
+### Project Description
+# Here, I have used reactjs and react router.
+# I have also used Tailwind css framework for styling the website
+# I have also used DaisyUI, a tailwind components for making website
+# I have used different react hooks, useLoaderData(), UseNavigate() for my project.
