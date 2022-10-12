@@ -1,6 +1,8 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEye } from '@fortawesome/free-solid-svg-icons'
 import Option from '../Option/Option';
 
 const Question = (props) => {
@@ -27,6 +29,8 @@ const Question = (props) => {
             <div className='bg-slate-200'>
                 <div className='border border-indigo-300 text-center p-5 font-semibold'>
                     <h2>{question}</h2>
+                    <p className='text-end'><FontAwesomeIcon className='text-end' icon={faEye} /></p>
+
 
                 </div>
                 <div className='grid grid-cols-2 gap-2'>
