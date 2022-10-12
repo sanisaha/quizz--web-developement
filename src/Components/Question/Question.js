@@ -1,35 +1,42 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Option from '../Option/Option';
 
 const Question = (props) => {
-    console.log(props);
     const { question, options, correctAnswer } = props.question;
-    const handleChange = (e) => {
-        let text = e.target.textContent;
+    const handleChange = (event) => {
+        let text = event.target.innerText;
         if (text === correctAnswer) {
-            return (
-                <div className="toast toast-top toast-end">
-                    <div className="alert alert-info">
-                        <div>
-                            <span>Congrats,answer is correct</span>
-                        </div>
-                    </div>
-                </div>
-            )
+            toast.success('This is correct answer', {
+                position: "bottom-right",
+                theme: "colored",
+                toastId: "success"
+            })
         } else {
-            alert('better luck next time')
+            toast.error('Incorrect answer', {
+                position: "bottom-right",
+                theme: "colored",
+                toastId: "error"
+            })
         }
+
     }
     return (
         <div className='p-5'>
             <div className='bg-slate-200'>
                 <div className='border border-indigo-300 text-center p-5 font-semibold'>
                     <h2>{question}</h2>
+
                 </div>
                 <div className='grid grid-cols-2 gap-2'>
                     {
-                        options.map((option) => <div className='border border-indigo-300'>
-                            <li onClick={handleChange} className='p-5 list-none hover:bg-slate-600'>{option}</li>
-                        </div>)
+                        options.map((option, index) => <Option
+                            key={index}
+                            index={index}
+                            option={option}
+                            handleChange={handleChange}
+                        ></Option>)
                     }
                 </div>
             </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import Question from '../Question/Question';
 
 const Test = () => {
@@ -18,9 +19,7 @@ const Test = () => {
                     ></Question>)
                 }
             </div>
-            <div>
-
-            </div>
+            <ToastContainer />
         </div>
     );
 };
