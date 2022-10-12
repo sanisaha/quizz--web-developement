@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Option = ({ option, handleChange, index }) => {
+const Option = ({ option, handleChange }) => {
     return (
-        <div className='border border-indigo-300'>
-            <li onClick={handleChange} className='p-5 list-none hover:bg-slate-600'>{option}</li>
+        <div onClick={handleChange} className='p-5 border border-indigo-600 hover:bg-slate-600'>
+            <p className='text-center break-all'>{option}</p>
         </div>
     );
 };

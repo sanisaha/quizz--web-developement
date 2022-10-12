@@ -4,7 +4,6 @@ import { CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, X
 
 const Statistics = () => {
     const statistics = useLoaderData();
-    console.log(statistics.data);
     return (
         <div>
             <div className='mb-10'>

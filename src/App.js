@@ -3,6 +3,7 @@ import './App.css';
 import Blog from './Components/Blog/Blog';
 import Error from './Components/Error/Error';
 import Main from './Components/Layout/Main';
+import Register from './Components/Register/Register';
 import Statistics from './Components/Statistics/Statistics';
 import Test from './Components/Test/Test';
 import Topics from './Components/Topics/Topic';
@@ -33,7 +34,9 @@ function App() {
           }
           , element: <Statistics></Statistics>
         },
-        { path: '/blog', element: <Blog></Blog> }]
+        { path: '/blog', element: <Blog></Blog> },
+        { path: '/register', element: <Register></Register> },
+        ]
     }, {
       path: '/*', element: <Error></Error>
     }

@@ -8,7 +8,7 @@ const Quiz = (quiz) => {
         navigate(`/quiz/${id}`)
     }
     return (
-        <div className="card w-96 bg-indigo-300">
+        <div className="card w-full lg:w-96 bg-indigo-300">
             <figure><img src={logo} alt="Shoes" /></figure>
             <div className="card-body bg-indigo-100 shadow-xl">
                 <h2 className="card-title">{name}</h2>

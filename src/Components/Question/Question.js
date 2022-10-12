@@ -6,6 +6,7 @@ import { faEye } from '@fortawesome/free-solid-svg-icons'
 import Option from '../Option/Option';
 
 const Question = (props) => {
+    const { index } = props;
     const { question, options, correctAnswer } = props.question;
     const eyeBtnHandler = () => {
         toast.info(`Correct answer: ${correctAnswer}`, { theme: 'colored' });
@@ -30,9 +31,9 @@ const Question = (props) => {
     return (
         <div className='p-5'>
             <div className='bg-slate-200'>
-                <div className='border border-indigo-300 text-center p-5 font-semibold'>
-                    <h2>{question}</h2>
-                    <p className='text-end'><button className='btn' onClick={eyeBtnHandler}><FontAwesomeIcon className='text-end' icon={faEye} /></button></p>
+                <div className='flex lg:block border border-indigo-300 text-center p-5 font-semibold'>
+                    <h2>Quiz {index + 1}: {question}</h2>
+                    <p className='text-end'><button className='lg:btn' onClick={eyeBtnHandler}><FontAwesomeIcon className='text-end' icon={faEye} /></button></p>
 
 
                 </div>
@@ -40,7 +41,6 @@ const Question = (props) => {
                     {
                         options.map((option, index) => <Option
                             key={index}
-                            index={index}
                             option={option}
                             handleChange={handleChange}
                         ></Option>)

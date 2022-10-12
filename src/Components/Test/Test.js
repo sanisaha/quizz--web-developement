@@ -12,9 +12,10 @@ const Test = () => {
                 <h1 className='text-3xl text-center font-bold mb-10'>Quiz from <span className='text-4xl'>{data.name}</span></h1>
 
             </div>
-            <div className='mx-20'>
+            <div className='mx-1 lg:mx-20'>
                 {
-                    data.questions.map(question => <Question
+                    data.questions.map((question, index) => <Question
+                        index={index}
                         key={question.id}
                         question={question}
                     ></Question>)
