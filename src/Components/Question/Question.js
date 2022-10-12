@@ -7,6 +7,9 @@ import Option from '../Option/Option';
 
 const Question = (props) => {
     const { question, options, correctAnswer } = props.question;
+    const eyeBtnHandler = () => {
+        toast.info(`Correct answer: ${correctAnswer}`, { theme: 'colored' });
+    }
     const handleChange = (event) => {
         let text = event.target.innerText;
         if (text === correctAnswer) {
@@ -29,7 +32,7 @@ const Question = (props) => {
             <div className='bg-slate-200'>
                 <div className='border border-indigo-300 text-center p-5 font-semibold'>
                     <h2>{question}</h2>
-                    <p className='text-end'><FontAwesomeIcon className='text-end' icon={faEye} /></p>
+                    <p className='text-end'><button className='btn' onClick={eyeBtnHandler}><FontAwesomeIcon className='text-end' icon={faEye} /></button></p>
 
 
                 </div>
