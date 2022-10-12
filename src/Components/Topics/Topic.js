@@ -14,7 +14,7 @@ const Topics = () => {
     return (
         <div className='w-full p-10 mt-0'>
             <header className="w-full bg-no-repeat h-80 lg:h-96 bg-cover bg-center bg-[url('/public/images/web-quizz.png')]">
-                <div className='p-10 lg:p-20'>
+                <div className='p-10 lg:p-10'>
                     <h1 className='text-white w-full lg:w-2/5 font-bold text-md lg:text-4xl'>Learn Faster. Stay Motivated. Study Smarter</h1>
                     <div>
                         <label className="relative block">

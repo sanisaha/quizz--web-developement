@@ -23,7 +23,7 @@ const Header = () => {
                         </ul>
                     </div>
 
-                    <p className="font-bold normal-case text-3xl"> <FontAwesomeIcon className='hidden lg:inline lg:text-5xl' icon={faClipboard} /> Web Quizz</p>
+                    <p className="font-bold normal-case text-md lg:text-3xl"> <FontAwesomeIcon className='hidden lg:inline lg:text-5xl' icon={faClipboard} /> Web Quizz</p>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0 font-semibold text-2xl">
